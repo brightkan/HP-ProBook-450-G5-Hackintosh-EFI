@@ -5,7 +5,7 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 ### Laptop Specifications:
 - Intel i7-8550U (8) @ 1.80GHz CPU 
 - Intel HD 620 Graphics
-- 8GB DDR4-2133MHz RAM
+- 8GB DDR4-2400 MHz RAM
 - 15.6 Full HD Display
 - Synaptics PS2 TouchPad
 - Intel Dual Band Wi-Fi and Bluetooth Card
@@ -15,6 +15,7 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 
 
 ### BIOS Setup:
+- Enable Embedded LAN Controller
 - Disable Fast Boot
 - Disable Power On when AC Detected
 - Disable Power On when Lid is Opened
@@ -41,7 +42,7 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 - Audio Control Hotkeys
 - HDMI Video and Audio
 - Integrated Camera
-- Wifi 
+- Wifi, Ethernet and Bluetooth
 - Native audio with AppleALC, including headphone
 - Built-in mic
 - Native power management
@@ -51,9 +52,7 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 - Sleep and Wake
 
 ### What doesn't work:
-- Ethernet
-- Brighteness
-- Intel card Bluetooth 
+- Brightness Control Hotkeys 
 
 ### Credits
 - null-x/HP-ProBook-450-G3-Hackintosh
