@@ -1,4 +1,4 @@
-# HP-ProBook-450-G5-OpenCore
+# HP ProBook 450 G5
 
 OpenCore setup for running Hackintosh on HP ProBook 450 G5
 
@@ -53,9 +53,6 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 
 ### What doesn't work:
 - Brightness Control Hotkeys 
-
-### Credits
-- null-x/HP-ProBook-450-G3-Hackintosh
 
 #### Thanks to:
 - https://dortania.github.io/OpenCore-Install-Guide/
