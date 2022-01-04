@@ -35,10 +35,10 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 - Enable Power Control
 
 ### What works:
-- macOS Big Sur 11.0.1 20B50
+- macOS 12.2 Monterey
 - UEFI booting via OpenCore
 - Built-in keyboard (with special function keys)
-- Built-in trackpad (basic gestures)
+- Built-in trackpad (Full gestures)
 - Audio Control Hotkeys
 - HDMI Video and Audio
 - Integrated Camera
