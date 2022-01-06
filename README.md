@@ -49,10 +49,7 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 - Battery status
 - USB 3.0 Ports
 - Audio on internal speaker and headphone
-- Sleep and Wake
-
-### What doesn't work:
-- Brightness Control Hotkeys 
+- Sleep and Wake 
 
 #### Thanks to:
 - https://dortania.github.io/OpenCore-Install-Guide/
