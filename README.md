@@ -1,4 +1,4 @@
-# HP-ProBook-450-G5-OpenCore
+# HP ProBook 450 G5
 
 OpenCore setup for running Hackintosh on HP ProBook 450 G5
 
@@ -35,10 +35,10 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 - Enable Power Control
 
 ### What works:
-- macOS Big Sur 11.0.1 20B50
+- macOS 12.2 Monterey
 - UEFI booting via OpenCore
 - Built-in keyboard (with special function keys)
-- Built-in trackpad (basic gestures)
+- Built-in trackpad (Full gestures)
 - Audio Control Hotkeys
 - HDMI Video and Audio
 - Integrated Camera
@@ -49,13 +49,46 @@ OpenCore setup for running Hackintosh on HP ProBook 450 G5
 - Battery status
 - USB 3.0 Ports
 - Audio on internal speaker and headphone
-- Sleep and Wake
+- Sleep and Wake 
 
-### What doesn't work:
-- Brightness Control Hotkeys 
+## TouchPad and Gesture
+```swift
+/*
+ * Find USTP:          55 53 54 50 08
+ * Replace XSTP:       58 53 54 50 08
+ */
+DefinitionBlock("", "SSDT", 2, "hack", "I2Cpatch", 0)
+{
+    External (_SB_.PCI0.I2C1, DeviceObj)
+    External (_SB_.PCI0.I2C1.TPD0, DeviceObj)
+    External (SDM1, FieldUnitObj)
+    External (GPEN, FieldUnitObj)
 
-### Credits
-- null-x/HP-ProBook-450-G3-Hackintosh
+    Scope (\)
+    {
+        If (_OSI ("Darwin"))
+        {
+            GPEN = One
+            SDM1 = Zero
+        }
 
+        Scope (_SB.PCI0.I2C1)
+        {
+            If (_OSI ("Darwin"))
+            {
+                Name (USTP, One)
+            }
+
+            Scope (TPD0)
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Name (OSYS, 0x07DC)
+                }
+            }
+        }
+    }
+}
+```
 #### Thanks to:
 - https://dortania.github.io/OpenCore-Install-Guide/
